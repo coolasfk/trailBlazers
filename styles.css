@@ -172,10 +172,11 @@ body {
   h2.underline {
       text-decoration: underline;
       text-decoration-color: var(--detail-color-one);
-      text-decoration-thickness: 0.5em;
+      text-decoration-thickness: 0.2em;
       text-decoration-style: wavy;
       grid-column: 2/3;
       grid-row: 5/6;
+      margin-top: 0;
       
   }
 .shape {
