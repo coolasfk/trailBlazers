@@ -80,7 +80,7 @@ body {
         z-index: 0;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.1fr 1fr 0.4fr 0.4fr 0.4fr 0.4fr 0.1fr 0.1fr auto 0.2fr;
+        grid-template-rows: 0.1fr 1fr 0.4fr 0.4fr 0.4fr 0.4fr 0.1fr 0.1fr auto auto 0.2fr;
         grid-template-areas:
     "nav"
     "main_section"
@@ -91,6 +91,7 @@ body {
     "wave_divider"
     "about"
     "process"
+    "contact"
     "footer"
     ;
     width: 100vw;
@@ -172,7 +173,7 @@ body {
   h2.underline {
       text-decoration: underline;
       text-decoration-color: var(--detail-color-one);
-      text-decoration-thickness: 0.2em;
+      text-decoration-thickness: 0.15em;
       text-decoration-style: wavy;
       grid-column: 2/3;
       grid-row: 5/6;
@@ -223,6 +224,7 @@ h6 {
 h3 {
    
     font-size: 2.4rem;
+    color: var(--font-color);
 }
 
 .box h3 {
@@ -243,6 +245,7 @@ h4 {
     font-size: 1.4rem;
     letter-spacing: 0.1rem;
     line-height: 120%;
+    color: var(--font-color);
 }
 .box h4 {
     grid-column:  2/3 ; 
@@ -252,7 +255,7 @@ h4 {
 }
 .box.one {
     grid-area: box-one;
-    color: var(--font-color);
+    
 }
 
 .triangle_btn {
@@ -261,7 +264,7 @@ h4 {
     grid-row: 4/5;
     justify-self: center;
     align-self: center;
-    fill: var(--font-color);
+
 }
 
 .logo_trailblazers_full {
@@ -288,7 +291,7 @@ grid-area: about;
 display: grid;
 grid-template-rows: 1fr 0.8rem auto;
 grid-template-columns: 1fr 10fr 1fr;
-color: var(--font-color);
+
 }
 
 .about h3 {
@@ -309,7 +312,6 @@ color: var(--font-color);
 .process {
     grid-area: process;
     width: 100vw;
-    color: var(--font-color);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -339,6 +341,10 @@ color: var(--font-color);
 }
 .step.five {
     grid-row: 5/6;
+}
+
+.step.five .vertical_line{
+    height: 95%;
 }
 .vertical_line {
 
@@ -380,16 +386,122 @@ color: var(--font-color);
     margin-bottom: 0;
 }
 
+.picture_contact {
+    height: 50vw;
+    justify-self: center;
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    margin: 15vw 0 5vw 0;
+}
+.contact {
+    grid-area: contact;
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: 0.2fr 0.8rem 0.1fr 0.5fr 0.0001fr 0.8rem minmax(10vw,auto) 0.8rem 0.3fr 0.8rem 0.3fr 0.3fr 0.3fr 0.3fr;
+    width: 100vw;
+    justify-self: center;
+}
 
+.contact h3 {
+    grid-column: 2 / 3;
+    justify-self: center;
+    margin-bottom: 0;
+}
+.contact h4 {
+    grid-column: 2 / 3;
+    justify-self: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.contact form {
+    grid-column: 2 / 3;
+    grid-row: 7 / 8;
+    justify-self: center;
+    text-justify: center;
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: 1fr 0.8rem 1fr 0.8rem 1fr 0.8rem minmax(1ch, auto) 0.8rem 1fr;
+}
 
+.type_in {
+    display: flex;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    grid-column: 2 / 3;
+    color: var(--font-color);
+    font-size: 1.3rem;
+    font-family: hoss-round, sans-serif;
+    font-weight: 300;
+    padding-left: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 0;
+    overflow: hidden;
+    min-height: 10vw;
+    margin: 0;
+}
 
+#name_textfield {
+    grid-row: 3 / 4;
+}
+#email_textfield {
+    grid-row: 5 / 6;
+}
+#growing_textfield {
+    grid-row: 7 / 8;
+    margin: 0;
+}
+.submit_btn {
+   
+    border: none;
+    background-color: var(--detail-colour-two);
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 5vw;
+    grid-row: 9 / 10;
+    grid-column: 2 / 3;
+    color: var(--font-color);
+    font-size: 1.3rem;
+    font-family: hoss-round, sans-serif;
+    font-weight: 500;
+    padding: 5vw;
+    margin: 0;
+}
 
+#message_us{
+    justify-self: center;
+    text-align: center;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin: 0;
+}
 
+.text.one {
+    grid-row: 1 / 2;
+}
 
+.text.two {
+    grid-row: 3 / 4;
+    text-align: center;
+}
+.text.three {
+    grid-row: 5 / 6;
+}
 
+.text.four {
+    grid-row: 9 / 10;
 
+}
 
+.text.five {
+    grid-row: 11 / 12;
+    text-align: center;
+}
 
+.text.six {
+    grid-row: 13 / 14;
+    text-align: center;
+   
+}
 
 .footer {
     grid-area: footer;
@@ -397,5 +509,4 @@ color: var(--font-color);
     width: 100vw;
     padding: 5vw 0 5vw 0;
     display: grid;
-
 }
